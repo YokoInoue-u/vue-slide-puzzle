@@ -18,7 +18,7 @@ const routes = [
 ];
 
 const router = createRouter({
-    history: createWebHistory(), // HTML5 History API を使用して、URL をハッシュモードなしで綺麗に表示
+    history: createWebHistory('/my_puzzle_site'), // HTML5 History API を使用して、URL をハッシュモードなしで綺麗に表示
     routes                       // 上で定義したルートの配列
 });
 
