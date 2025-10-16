@@ -3,13 +3,15 @@ import PuzzleBoard from '@/components/PuzzleBoard.vue';
 </script>
 
 <template>
-  <div id="app">
+  <div>
     <h1>スライドパズル</h1>
     <PuzzleBoard />
+
+    <router-link :to="{ name: 'Home'}">＜ to Home</router-link>
   </div>
 </template>
 
-<style>
+<style scoped>
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
