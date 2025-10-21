@@ -11,11 +11,10 @@ app.use(router); // Vue アプリケーションにルーターをインスト�
 /**
  * VueGTMを用いたPageViewトラッキング送信
  */
-
 if (import.meta.env.PROD) {
     app.use(
         createGtm({
-            id: "import.meta.env.VITE_GTM_ID",    // GTM_IDをいれる
+            id: import.meta.env.VITE_GTM_ID,    // GTM_IDをいれる
             defer: false,         // ページの読み込みを高速化（トラッキング精度低下の可能性あり）
             debug: false,         // コンソールログのデバッグを表示するかどうか
             loadScript: true,     // GTMスクリプトを読み込むかどうか
@@ -25,4 +24,4 @@ if (import.meta.env.PROD) {
         })
     )
 };
-app.mount('#app')
+app.mount('#app');
